@@ -1,0 +1,10 @@
+[
+  {
+    "prompt": "ingestion_pipeline_prompt.json",
+    "output": "generated/ingestion_pipeline.json"
+  },
+  {
+    "prompt": "audit_tracking_prompt.json",
+    "output": "generated/audit_tracking.yml"
+  }
+]
