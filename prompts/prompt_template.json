@@ -1,0 +1,25 @@
+{
+  "layer": "Ingestion",
+  "source_files": [
+    "configs/ingestion_metadata.json",
+    "configs/source_config.json",
+    "configs/target_config.json",
+    "configs/adf_config.json"
+  ],
+  "tasks": [
+    {
+      "name": "data_extraction",
+      "logic": "extract data from Oracle Exadata using metadata"
+    },
+    {
+      "name": "data_transformation",
+      "logic": "transform and load to Delta Lake using Databricks"
+    },
+    {
+      "name": "audit_logging",
+      "logic": "log load metrics and lineage to audit table"
+    }
+  ],
+  "environment": "prod",
+  "output_file": "generated/ingestion_pipeline.json"
+}
