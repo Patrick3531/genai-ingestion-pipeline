@@ -1,0 +1,8 @@
+{
+  "db_type": "oracle",
+  "host": "oracle-host",
+  "port": "1521",
+  "username": "your_user",
+  "password": "your_password",
+  "database": "orcl"
+}
