@@ -13,7 +13,25 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "JsonReadSettings"
+						}
+					},
+					"dataset": {
+						"referenceName": "Json1",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": true
+				}
 			},
 			{
 				"name": "If Condition1",
@@ -28,6 +46,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"expression": {
+						"value": "@equals(activity('Lookup1').output.firstRow.LOAD_TYPE, 'FULL')",
+						"type": "Expression"
+					},
 					"ifFalseActivities": [
 						{
 							"name": "SQL to ADLS Incremental",
