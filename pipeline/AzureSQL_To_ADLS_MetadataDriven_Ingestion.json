@@ -17,11 +17,12 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT source_table, source_query, target_path, target_file_name, file_format\nFROM ingestion_control\nWHERE is_active = 1",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "AzureSqlTable2",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false,
