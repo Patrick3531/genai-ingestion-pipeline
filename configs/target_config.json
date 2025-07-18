@@ -1,4 +1,7 @@
 {
-  "storage_account": "youradlstorage",
-  "container": "raw-zone"
+  "type": "Delta Lake",
+  "storage": "Azure Data Lake Gen2",
+  "path": "abfss://datalake/bronze/employee",
+  "mode": "append",
+  "partition_by": ["HIRE_DATE"]
 }
