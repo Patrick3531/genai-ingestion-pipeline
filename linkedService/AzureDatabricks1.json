@@ -4,15 +4,15 @@
 		"annotations": [],
 		"type": "AzureDatabricks",
 		"typeProperties": {
-			"domain": "https://adb-2769955015664560.0.azuredatabricks.net",
+			"domain": "https://adb-264145025577945.5.azuredatabricks.net",
 			"authentication": "MSI",
-			"workspaceResourceId": "/subscriptions/653f8ccc-36e2-4f19-862f-921173c065de/resourceGroups/GenAI-resource/providers/Microsoft.Databricks/workspaces/GenAi-workspace",
+			"workspaceResourceId": "/subscriptions/653f8ccc-36e2-4f19-862f-921173c065de/resourceGroups/GenAI-resource/providers/Microsoft.Databricks/workspaces/GeniAi_Prompt",
 			"newClusterNodeType": "Standard_DS3_v2",
 			"newClusterNumOfWorker": "1",
 			"newClusterSparkEnvVars": {
 				"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
 			},
-			"newClusterVersion": "17.0.x-scala2.13",
+			"newClusterVersion": "13.3.x-scala2.12",
 			"clusterOption": "Fixed",
 			"newClusterInitScripts": []
 		}
