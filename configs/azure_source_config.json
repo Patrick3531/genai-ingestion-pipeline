@@ -1,0 +1,10 @@
+{
+  "type": "Azure SQL Database",
+  "table": "Employee",
+  "connection": {
+    "server": "<your-server-name>",
+    "database": "<your-database-name>",
+    "username": "<your-username>",
+    "password": "<your-password>"
+  }
+}
