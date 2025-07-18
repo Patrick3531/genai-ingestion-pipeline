@@ -1,7 +1,0 @@
-{
-  "integration_runtime": "self-hosted-ir",
-  "linked_services": {
-    "oracle": "OracleLinkedService",
-    "datalake": "AzureBlobStorageLinkedService"
-  }
-}
