@@ -1,10 +1,8 @@
 {
-  "tables": [
-    {
-      "source_table": "HR.EMPLOYEES",
-      "load_type": "incremental",
-      "watermark_column": "LAST_UPDATED",
-      "target_table": "adl://datalake/hr/employees"
-    }
-  ]
+  "layer": "Ingestion",
+  "environment": "prod",
+  "source_table": "Employee",
+  "incremental_column": "LAST_UPDATED",
+  "load_mode": "append",
+  "partition_by": ["HIRE_DATE"]
 }
